@@ -2,13 +2,11 @@
 
 namespace ScheduledCommandBundle\Entity;
 
-use ScheduledCommandBundle\Model\CommandScheduler;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="scheduled_command")
- * @ORM\HasLifecycleCallbacks
  */
 class ScheduledCommand
 {
@@ -127,47 +125,6 @@ class ScheduledCommand
     public function setJobId(int $jobId): void
     {
         $this->jobId = $jobId;
-    }
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function createScheduledCommand()
-    {
-        $commandScheduler = new CommandScheduler();
-        $result = $commandScheduler->scheduleCommand($this->getCommand(), $this->getDatetime());
-
-        $this->setJobId($result->getJobId());
-        $this->setCommandFile($result->getFilename());
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function updateScheduledCommand()
-    {
-        $commandScheduler = new CommandScheduler();
-        $commandScheduler->removeScheduledCommand($this->getJobId());
-        if (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN') {
-            unlink($this->getCommandFile());
-        }
-
-        $result = $commandScheduler->scheduleCommand($this->getCommand(), $this->getDatetime());
-
-        $this->setJobId($result->getJobId());
-        $this->setCommandFile($result->getFilename());
-    }
-
-    /**
-     * @ORM\PreRemove
-     */
-    public function removeScheduledCommand()
-    {
-        $commandScheduler = new CommandScheduler();
-        $commandScheduler->removeScheduledCommand($this->getJobId());
-        if (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN') {
-            unlink($this->getCommandFile());
-        }
     }
 
     public function __toString()
