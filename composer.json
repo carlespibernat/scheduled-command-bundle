@@ -8,6 +8,7 @@
   "require": {
     "php":"^7.1",
     "symfony/http-kernel": "^4.0",
+    "symfony/dependency-injection": "^4.0",
     "doctrine/orm": "^2.6"
   },
   "autoload": {
