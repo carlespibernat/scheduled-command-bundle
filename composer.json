@@ -1,5 +1,5 @@
 {
-  "name": "carlespibernat/scheduled-command-bundle",
+  "name": "carles/scheduled-command-bundle",
   "type": "symfony-bundle",
   "description": "Manage commands schedule from Symfony",
   "keywords": ["command", "schedule", "backend"],
