@@ -1,7 +1,7 @@
 {
   "name": "carles/scheduled-command-bundle",
   "type": "symfony-bundle",
-  "description": "Manage commands schedule from Symfony",
+  "description": "Manage scheduled commands from Symfony",
   "keywords": ["command", "schedule", "backend"],
   "homepage": "https://github.com/carlespibernat/scheduled-command-bundle",
   "license": "MIT",
