@@ -1,0 +1,16 @@
+{
+  "name": "carlespibernat/scheduled-command-bundle",
+  "type": "symfony-bundle",
+  "description": "Manage commands schedule from Symfony",
+  "keywords": ["command", "schedule", "backend"],
+  "homepage": "https://github.com/carlespibernat/scheduled-command-bundle",
+  "license": "MIT",
+  "require": {
+    "doctrine/orm": "^2.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "ScheduledCommandBundle\\": "src"
+    }
+  }
+}
