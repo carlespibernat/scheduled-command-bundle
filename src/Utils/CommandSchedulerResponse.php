@@ -1,6 +1,6 @@
 <?php
 
-namespace ScheduledCommandBundle\Model;
+namespace ScheduledCommandBundle\Utils;
 
 class CommandSchedulerResponse
 {
