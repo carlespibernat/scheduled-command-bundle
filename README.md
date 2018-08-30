@@ -26,7 +26,7 @@ will be stored in a file under the configured directory.
 The default directory is */tmp*, but feel free to change it in the configuration:
 ```yaml
 scheduled_command:
-    temp_command_files_dir: hola
+    temp_command_files_dir: /my/directory
 ```
 
 At the moment this bundle is only working in unix environments where the `at` command
