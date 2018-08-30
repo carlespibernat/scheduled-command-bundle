@@ -30,4 +30,4 @@ scheduled_command:
 ```
 
 At the moment this bundle is only working in unix environments where the `at` command
-is install, but it would be nice to add Windows compatibility.
+is installed, but it would be nice to add Windows compatibility in the future.
