@@ -6,7 +6,6 @@
     <services>
 
         <service id="scheduled.command.command.scheduler" class="ScheduledCommandBundle\Utils\CommandScheduler" public="true">
-            <argument type="service" id="property_accessor" />
             <argument>%scheduled.command.config.scheduled_command.temp_command_files_dir%</argument>
         </service>
 
