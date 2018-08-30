@@ -5,7 +5,7 @@ namespace ScheduledCommandBundle\EventListener;
 use Doctrine\Common\EventSubscriber as EventSubscriberInterface;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use ScheduledCommandBundle\Entity\ScheduledCommand;
-use ScheduledCommandBundle\Model\CommandScheduler;
+use ScheduledCommandBundle\Utils\CommandScheduler;
 
 class EventSubscriber implements EventSubscriberInterface
 {
