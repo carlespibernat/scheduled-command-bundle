@@ -7,9 +7,9 @@ class CommandScheduler
     /** @var string */
     private $temporalDirectory;
 
-    public function __construct(string $temporalDirectory)
+    public function __construct(array $config)
     {
-        $this->temporalDirectory = $temporalDirectory;
+        $this->temporalDirectory = $config['temp_command_files_dir'];
     }
 
     /**

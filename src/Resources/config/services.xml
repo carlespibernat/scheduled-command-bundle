@@ -6,7 +6,7 @@
     <services>
 
         <service id="scheduled.command.command.scheduler" class="ScheduledCommandBundle\Utils\CommandScheduler" public="true">
-            <argument>%scheduled.command.config.scheduled_command.temp_command_files_dir%</argument>
+            <argument>%scheduled.command.config%</argument>
         </service>
 
         <service id="scheduled.command.event.subscriber" class="ScheduledCommandBundle\EventListener\EventSubscriber">
