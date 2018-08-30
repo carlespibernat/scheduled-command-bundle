@@ -1,7 +1,7 @@
 Command Scheduler Symfony bundle
 ================================
 
-This bundle let you schedule commands using the unix `at` command.  
+This bundle lets you schedule commands using the unix `at` command.  
 
 Usage
 -----
