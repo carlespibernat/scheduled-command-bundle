@@ -3,7 +3,7 @@
 namespace ScheduledCommandBundle\EventListener;
 
 use Doctrine\Common\EventSubscriber as EventSubscriberInterface;
-use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use Doctrine\ORM\Event\LifecycleEventArgs;
 use ScheduledCommandBundle\Entity\ScheduledCommand;
 use ScheduledCommandBundle\Utils\CommandScheduler;
 
